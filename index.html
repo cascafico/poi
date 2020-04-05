@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Segnala PDI camper</title>
+  <link rel="stylesheet" href="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
+
+<!-- Extra Codiqa features -->
+  <link rel="stylesheet" href="codiqa.ext.css">
+
+<!-- jQuery and jQuery Mobile -->
+  <script src="https://d10ajoocuyu32n.cloudfront.net/jquery-1.9.1.min.js"></script>
+  <script src="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+<!-- Extra Codiqa features -->
+  <script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script>
+  <script src="geo.js"></script>
+  <script src="notes.js"></script>  
+  </script>  
+</head>
+
+<body>
+<!-- Home -->
+<div data-role="page" id="page1">
+    <div data-theme="a" data-role="header">
+        <h2>
+            PDI camper
+        </h2>
+</div>
+
+<div data-role="content">
+        <form id="form">
+
+<div data-role="fieldcontain">
+  <!--label for="categoria">
+  Categoria PDI
+  </label-->
+<table><th colspan="3">categoria PDI</th>
+ <tr><th>Punto Sosta</th><th>Camper Service</th><th>Area Attrezzata</th></tr>
+ <tr>
+ <td align="center"><input type="radio" name="categoria" id="categoria" value="Punto Sosta">
+ <td align="center"><input type="radio" name="categoria" id="categoria" value="Camper Service"> 
+ <td align="center"><input type="radio" name="categoria" id="categoria" value="Area Attrezzata" checked> 
+ </tr>
+ </table>
+</div>
+
+            
+            <div data-role="fieldcontain">
+                <label for="nome">
+                    Nome
+                </label>
+                <input name="nome" id="nome" placeholder="nome" value="" data-mini="true"
+                type="text">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="Permanenza max">
+                    Permanenza max
+                </label>
+                <input name="maxstay" id="maxstay" placeholder="8-24..72 h(our) oppure w(eek)" value="" data-mini="true" type="text">
+            </div>
+            
+
+
+<div data-role="fieldcontain">
+  <label for="carico">
+  Carico Acqua
+  </label>
+<input type="checkbox"  id="carico" name="water_point" value="water_point=yes" >
+</div>
+<div data-role="fieldcontain">
+  <label for="scarico">
+  Scarico
+  </label>
+<input type="checkbox"  id="scarico" name="sanitary_dump_station" value="sanitary_dump_station=yes" >
+</div>
+<div data-role="fieldcontain">
+  <label for="corrente">
+  Corrente
+  </label>
+<input type="checkbox"  id="corrente" name="power_supply" value="power_supply=yes">
+</div>
+<div data-role="fieldcontain">
+  <label for="toilets">
+  WC
+  </label>
+<input type="checkbox"  id="toilets" name="toilets" value="toilets=yes">
+</div>
+
+<div data-role="fieldcontain">
+  <label for="picnic_area">
+  Zona Picnic
+  </label>
+<input type="checkbox"  id="picnic_area" name="picnic_area" value="picnic_area=yes">
+</div>
+
+
+            <div data-role="fieldcontain">
+                <label for="tel">
+                    Numero di Telefono
+                </label>
+                <!-- con number il placeholder non funziona-->
+                <input name="tel" id="tel" placeholder="+39 0771 513xxx" value=""
+                data-mini="true" type="number">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="web">
+                    Sito Web
+                </label>
+                <input name="web" id="web" placeholder="http://www..it"
+                value="" data-mini="true" type="text">
+            </div>
+
+
+
+
+
+            <div data-role="fieldcontain">
+                <label for="note">
+                    Note
+                </label>
+                <textarea name="note" id="note" placeholder="periodo di apertura, BBQ, parcogiochi..."></textarea>
+            </div>
+            <div id="geo">
+            </div>
+            <input data-theme="a" value="Invia" type="submit">
+        </form>
+    </div>
+</div>
+</body>
+</html>
