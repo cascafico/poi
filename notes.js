@@ -15,12 +15,13 @@ $( document ).ready(function(){
 			+"\nTelefono:"+$("#tel").val()
 			+"\nWeb:"+$("#web").val()
 			+"\nPIVA:"+$("#piva").val()
-			+"\nNote:"+$("#note").val();
+			+"\nNote:"+$("#note").val()
+		        +"\nPDI_Camper";
 		      
 		      // Invia i dati a osm 
 		      $.ajax({
 			type: "POST",
-			url: "http://api.openstreetmap.org/api/0.6/notes",
+			url: "http://api.openstreetmap.org/api/0.6/notes?",
 			data: "lat=" + lat  + "&lon=" + lon +"&text="+testo,
 			dataType: "html",
 			success: function(msg)
